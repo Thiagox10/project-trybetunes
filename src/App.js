@@ -12,6 +12,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <p>TrybeTunes</p>
         <BrowserRouter>
           <Switch>
             <Route path="/profile/edit" component={ ProfileEdit } />
@@ -23,7 +24,6 @@ class App extends React.Component {
             <Route path="*" component={ NotFound } />
           </Switch>
         </BrowserRouter>
-        <h1>TrybeTunes</h1>
       </div>
     );
   }
