@@ -22,7 +22,7 @@ class CardAlbum extends React.Component {
 
 CardAlbum.propTypes = {
   artistName: PropTypes.string.isRequired,
-  collectionId: PropTypes.string.isRequired,
+  collectionId: PropTypes.number.isRequired,
   imgAlbum: PropTypes.string.isRequired,
   collectionName: PropTypes.string.isRequired,
 };

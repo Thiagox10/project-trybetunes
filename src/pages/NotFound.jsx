@@ -4,7 +4,7 @@ class NotFound extends React.Component {
   render() {
     return (
       <div data-testid="page-not-found">
-        Nenhum álbum foi encontrado
+        <h3>Nenhum álbum foi encontrado</h3>
       </div>
     );
   }
