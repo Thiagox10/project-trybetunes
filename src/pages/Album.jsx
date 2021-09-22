@@ -4,6 +4,7 @@ import Carregando from '../components/Carregando';
 import Header from '../components/Header';
 import MusicCard from '../components/MusicCard';
 import getMusics from '../services/musicsAPI';
+import { getFavoriteSongs } from '../services/favoriteSongsAPI';
 
 class Album extends React.Component {
   constructor() {
@@ -12,13 +13,33 @@ class Album extends React.Component {
     this.state = {
       loading: true,
       listMusic: [],
+      favoritList: [],
+      loadingFavorito: false,
     };
 
     this.fetchMusics = this.fetchMusics.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.getFavorite = this.getFavorite.bind(this);
   }
 
   componentDidMount() {
     this.fetchMusics();
+    this.getFavorite();
+  }
+
+  componentDidUpdate() {
+    this.getFavorite();
+  }
+
+  handleChange(params) {
+    this.setState({
+      loadingFavorito: params,
+    });
+  }
+
+  async getFavorite() {
+    const listFavorite = await getFavoriteSongs();
+    this.setState({ favoritList: listFavorite });
   }
 
   async fetchMusics() {
@@ -27,8 +48,16 @@ class Album extends React.Component {
     this.setState({ loading: false, listMusic: musics });
   }
 
+  // checkedChange({ target }) {
+  //   const { name } = target;
+  //   const value = target.type === 'checkbox' ? target.checked : target.value;
+  //   this.setState({
+  //     checked: value,
+  //   });
+  // }
+
   render() {
-    const { listMusic, loading } = this.state;
+    const { listMusic, loading, loadingFavorito, favoritList } = this.state;
     if (loading) {
       return (
         <Carregando />
@@ -41,16 +70,25 @@ class Album extends React.Component {
           <img src={ listMusic[0].artworkUrl100 } alt={ listMusic[0].artistName } />
           <h2 data-testid="artist-name">{listMusic[0].artistName}</h2>
           <h3 data-testid="album-name">{listMusic[0].collectionName}</h3>
-          {listMusic.slice([1]).map((element) => (<MusicCard
-            key={ element.trackName }
-            trackName={ element.trackName }
-            previewUrl={ element.previewUrl }
-          />))}
+          {loadingFavorito
+            ? <Carregando />
+            : listMusic.slice([1]).map((element, index) => (
+              <MusicCard
+                index={index}
+                key={ element.trackName }
+                trackName={ element.trackName }
+                previewUrl={ element.previewUrl }
+                trackId={ element.trackId }
+                music={ element }
+                loading={ this.handleChange }
+                checked={ favoritList.some((favorite) => element.trackId === favorite.trackId) }
+              />))}
         </div>
       </div>
     );
   }
 }
+
 Album.propTypes = {
   match: PropTypes.shape(
     { params: PropTypes.shape({ id: PropTypes.string }) },

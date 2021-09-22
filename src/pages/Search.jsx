@@ -41,7 +41,8 @@ class Search extends React.Component {
     this.setState({
       albumList: responseObj,
       artist: `Resultado de álbuns de: ${inputsearch}`,
-      inputsearch: '' });
+      inputsearch: '',
+      disabled: true });
   }
 
   render() {
