@@ -51,6 +51,7 @@ class Login extends React.Component {
 
     return (
       <div data-testid="page-login">
+        <img src="" alt="trybetunes" />
         <form>
           <input
             name="inputname"

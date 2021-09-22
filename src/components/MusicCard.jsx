@@ -32,7 +32,7 @@ class MusicCard extends React.Component {
 MusicCard.propTypes = {
   trackName: PropTypes.string.isRequired,
   previewUrl: PropTypes.string.isRequired,
-  trackId: PropTypes.string.isRequired,
+  trackId: PropTypes.number.isRequired,
   checked: PropTypes.bool.isRequired,
   favoriteMusic: PropTypes.func.isRequired,
 };

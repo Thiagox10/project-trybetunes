@@ -12,7 +12,6 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <p>TrybeTunes</p>
         <BrowserRouter>
           <Switch>
             <Route path="/profile/edit" component={ ProfileEdit } />

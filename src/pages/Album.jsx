@@ -29,7 +29,7 @@ class Album extends React.Component {
   }
 
   componentDidUpdate() {
-    this.getFavorite();
+    // this.getFavorite();
   }
 
   handleChange(params) {
@@ -40,14 +40,14 @@ class Album extends React.Component {
 
   async getFavorite() {
     const listFavorite = await getFavoriteSongs();
-    this.setState({ favoritList: listFavorite });
+    this.setState({ favoritList: listFavorite, loadingFavorito: false });
   }
 
   async favoriteMusic(music) {
     this.handleChange(true);
     await addSong(music);
-    this.handleChange(false);
     this.getFavorite();
+    // this.handleChange(false);
   }
 
   async fetchMusics() {
@@ -55,14 +55,6 @@ class Album extends React.Component {
     const musics = await getMusics(id);
     this.setState({ loading: false, listMusic: musics });
   }
-
-  // checkedChange({ target }) {
-  //   const { name } = target;
-  //   const value = target.type === 'checkbox' ? target.checked : target.value;
-  //   this.setState({
-  //     checked: value,
-  //   });
-  // }
 
   render() {
     const { listMusic, loading, loadingFavorito, favoritList } = this.state;
