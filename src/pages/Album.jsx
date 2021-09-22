@@ -4,7 +4,7 @@ import Carregando from '../components/Carregando';
 import Header from '../components/Header';
 import MusicCard from '../components/MusicCard';
 import getMusics from '../services/musicsAPI';
-import { getFavoriteSongs } from '../services/favoriteSongsAPI';
+import { addSong, getFavoriteSongs } from '../services/favoriteSongsAPI';
 
 class Album extends React.Component {
   constructor() {
@@ -20,6 +20,7 @@ class Album extends React.Component {
     this.fetchMusics = this.fetchMusics.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.getFavorite = this.getFavorite.bind(this);
+    this.favoriteMusic = this.favoriteMusic.bind(this);
   }
 
   componentDidMount() {
@@ -40,6 +41,13 @@ class Album extends React.Component {
   async getFavorite() {
     const listFavorite = await getFavoriteSongs();
     this.setState({ favoritList: listFavorite });
+  }
+
+  async favoriteMusic(music) {
+    this.handleChange(true);
+    await addSong(music);
+    this.handleChange(false);
+    this.getFavorite();
   }
 
   async fetchMusics() {
@@ -74,14 +82,17 @@ class Album extends React.Component {
             ? <Carregando />
             : listMusic.slice([1]).map((element, index) => (
               <MusicCard
-                index={index}
+                index={ index }
                 key={ element.trackName }
                 trackName={ element.trackName }
                 previewUrl={ element.previewUrl }
                 trackId={ element.trackId }
                 music={ element }
                 loading={ this.handleChange }
-                checked={ favoritList.some((favorite) => element.trackId === favorite.trackId) }
+                checked={ favoritList.some(
+                  (favorite) => element.trackId === favorite.trackId,
+                ) }
+                favoriteMusic={ () => this.favoriteMusic(element) }
               />))}
         </div>
       </div>
