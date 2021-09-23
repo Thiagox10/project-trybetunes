@@ -54,7 +54,7 @@ class Search extends React.Component {
         { loading ? <Carregando /> : (
           <>
             <h1>Search</h1>
-            <form>
+            <form id="form">
               <input
                 data-testid="search-artist-input"
                 name="inputsearch"

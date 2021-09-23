@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
 import Carregando from './Carregando';
+import logo from '../logo.png';
+import './HeaderStyle.css';
 
 class Header extends React.Component {
   constructor() {
@@ -28,7 +30,8 @@ class Header extends React.Component {
   render() {
     const { loading, user: { name } } = this.state;
     return (
-      <header data-testid="header-component">
+      <header id="header" data-testid="header-component">
+        <img src={ logo } alt="trybetunes" />
         <nav>
           <Link data-testid="link-to-search" to="/search">Search</Link>
           <Link data-testid="link-to-favorites" to="/favorites">Favorites</Link>

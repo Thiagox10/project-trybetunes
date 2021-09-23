@@ -2,6 +2,8 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import Carregando from '../components/Carregando';
 import { createUser } from '../services/userAPI';
+import logo from '../LOGO_POSITIVA 1.png';
+import './LoginStyle.css';
 
 class Login extends React.Component {
   constructor() {
@@ -50,26 +52,29 @@ class Login extends React.Component {
     }
 
     return (
-      <div data-testid="page-login">
-        <img src="" alt="trybetunes" />
-        <form>
-          <input
-            name="inputname"
-            data-testid="login-name-input"
-            type="text"
-            onChange={ this.handleChange }
-            value={ inputname }
-            placeholder="Nome"
-          />
-          <button
-            data-testid="login-submit-button"
-            type="button"
-            disabled={ disabled }
-            onClick={ this.login }
-          >
-            Entrar
-          </button>
-        </form>
+      <div id="login" data-testid="page-login">
+        <img src={ logo } alt="trybetunes" />
+        <div id="form">
+          <form>
+            <input
+              name="inputname"
+              data-testid="login-name-input"
+              type="text"
+              onChange={ this.handleChange }
+              value={ inputname }
+              placeholder="Nome"
+            />
+            <br />
+            <button
+              data-testid="login-submit-button"
+              type="button"
+              disabled={ disabled }
+              onClick={ this.login }
+            >
+              Entrar
+            </button>
+          </form>
+        </div>
       </div>
     );
   }
