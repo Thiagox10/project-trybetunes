@@ -4,6 +4,14 @@ Este projeto trata-se de uma aplicação capaz de reproduzir músicas das mais v
 
 Utilizei a API do Itunes para ter acesso as musicas e reproduzi-las.
 
+### Ajustes e melhorias
+
+O projeto esta 80% finalizado e as próximas atualizações serão voltadas nas seguintes tarefas:
+
+- [ ] Remover musicas dos favoritos
+- [ ] Terminar tela de Usuario
+- [ ] Criar page de musicas favoritas
+
 ## Técnologias usadas
 
 <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">
