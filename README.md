@@ -2,7 +2,7 @@
 
 Este projeto trata-se de uma aplicação capaz de reproduzir músicas das mais variadas bandas e artistas, criar uma lista de músicas favoritas e editar o perfil da pessoa usuária logada.
 
-Utilizei a API do Itunes para ter acesso as musicas e reproduzi-las.
+Utilizei a `API` do Itunes para ter acesso as musicas e reproduzi-las.
 
 ### Ajustes e melhorias
 
