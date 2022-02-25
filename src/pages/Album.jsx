@@ -72,9 +72,8 @@ class Album extends React.Component {
           <h3 data-testid="album-name">{listMusic[0].collectionName}</h3>
           {loadingFavorito
             ? <Carregando />
-            : listMusic.slice([1]).map((element, index) => (
+            : listMusic.slice([1]).map((element) => (
               <MusicCard
-                index={ index }
                 key={ element.trackName }
                 trackName={ element.trackName }
                 previewUrl={ element.previewUrl }

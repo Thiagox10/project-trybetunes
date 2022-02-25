@@ -54,7 +54,7 @@ class Search extends React.Component {
         { loading ? <Carregando /> : (
           <>
             <h1>Search</h1>
-            <form id="form">
+            <form>
               <input
                 data-testid="search-artist-input"
                 name="inputsearch"
@@ -75,16 +75,19 @@ class Search extends React.Component {
             <h2>
               { artist }
             </h2>
-            {albumList.length === 0
-              ? <NotFound />
-              : albumList.map((element) => (
-                <CardAlbum
-                  key={ element.collectionId }
-                  collectionId={ element.collectionId }
-                  artistName={ element.artistName }
-                  imgAlbum={ element.artworkUrl100 }
-                  collectionName={ element.collectionName }
-                />))}
+            <div className="album-list">
+              {albumList.length === 0
+                ? <NotFound />
+                : albumList.map((element) => (
+                  <CardAlbum
+                    key={ element.collectionId }
+                    collectionId={ element.collectionId }
+                    artistName={ element.artistName }
+                    imgAlbum={ element.artworkUrl100 }
+                    collectionName={ element.collectionName }
+                  />
+                ))}
+            </div>
           </>
         ) }
       </div>

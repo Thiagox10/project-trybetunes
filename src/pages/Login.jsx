@@ -3,7 +3,6 @@ import { Redirect } from 'react-router-dom';
 import Carregando from '../components/Carregando';
 import { createUser } from '../services/userAPI';
 import logo from '../LOGO_POSITIVA 1.png';
-import './LoginStyle.css';
 
 class Login extends React.Component {
   constructor() {

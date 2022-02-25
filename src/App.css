@@ -1,0 +1,156 @@
+body {
+  background-color: #FAFAFA;
+}
+
+#login {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  background-color: #FAFAFA;
+  text-align: center;
+  
+}
+img {
+  width: 208px;
+  height: 158px;
+  padding: 70px;
+}
+
+#form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 697px;
+  height: 314px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+#form button {
+  padding: 8px 32px;
+  margin: 10px;
+  width: 519px;
+  height: 40px;
+  background: #003BE5;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  color: #FFFFFF;
+  border: 0;
+  font-size: 16px;
+}
+#form input {
+  padding: 12px 16px;
+  margin: 10px;
+  width: 485px;
+  height: 15px;
+  background: #FFFFFF;
+  border: 1px solid #E1E5EB;
+  border-radius: 0px;
+  font-size: 14px;
+}
+
+#form button:hover {
+  opacity: 80%;
+}
+
+#form button:disabled {
+  background-color: #003BE5;
+  opacity: 60%;
+}
+
+.album-list {
+  display: flex;
+  flex-flow: row wrap;
+  /* padding: 48px 30px; */
+  padding: 50px 200px;
+
+  /* width: 60%; */
+}
+
+.album-card{
+  background-color: #faf9f9;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  height: 340px;
+  margin: 5px;
+  overflow: hidden;
+  width: 280px;
+}
+
+.album-card-title {
+  color: #6c757d;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 12px;
+}
+
+.link {
+  text-decoration: none,
+}
+
+.album-card-subtitle {
+  color: #6c757d;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 8px;
+}
+
+.album-card-image {
+  width: auto;
+  padding: 0;
+}
+
+.album-card-body {
+  flex: 1 1 auto;
+  padding: 10px;
+}
+
+#header {
+  background-color: #023031;
+}
+
+#header img {
+  width: 100px;
+  height: 76px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #FFFFFF;
+  box-shadow: 0px 4px 1px rgba(0, 0, 0, 0.25);
+}
+
+.link{
+  text-decoration: none;
+}
+
+#selected {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: #036B52;
+  color: #FFFFFF;
+  width: 478px;
+  height: 78px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+#default {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: #F0F2F5;
+  color: #2FC18C;
+  width: 478px;
+  height: 78px;
+  font-size: 28px;
+  font-weight: 700;
+}

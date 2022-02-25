@@ -7,13 +7,16 @@ class CardAlbum extends React.Component {
     const { artistName, collectionId, imgAlbum, collectionName } = this.props;
     return (
       <Link
+        className="link"
         to={ `/album/${collectionId}` }
         data-testid={ `link-to-album-${collectionId}` }
       >
-        <div>
-          <img src={ imgAlbum } alt={ artistName } />
-          <h3>{ artistName }</h3>
-          <h4>{ collectionName }</h4>
+        <div className="album-card">
+          <img className="album-card-image" src={ imgAlbum } alt={ artistName } />
+          <div className="album-card-body">
+            <h3 className="album-card-title">{ artistName }</h3>
+            <h4 className="album-card-subtitle">{ collectionName }</h4>
+          </div>
         </div>
       </Link>
     );
