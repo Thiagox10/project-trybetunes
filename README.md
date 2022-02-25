@@ -27,9 +27,9 @@ git clone git@github.com:Thiagox10/project-trybetunes.git
 ## Instalando Dependências
   ```bash
    npm install
-  ``` 
+  ```
   
 ## Executando aplicação
   ```bash
    npm start
-  ``` 
+  ```
