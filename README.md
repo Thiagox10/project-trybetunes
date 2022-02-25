@@ -13,7 +13,7 @@ Utilizei a API do Itunes para ter acesso as musicas e reproduzi-las.
 
 # Instruções para clonar o projeto
 
-## Antes de começar a desenvolver
+## Vamos la!
 
 * Clone o repositório
 ```bash
