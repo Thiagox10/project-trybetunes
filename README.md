@@ -9,7 +9,8 @@ Utilizei a API do Itunes para ter acesso as musicas e reproduzi-las.
 <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">
 
 ## Protótipo do projeto
-<img width="800px" src="https://user-images.githubusercontent.com/37047615/155800978-8526aa43-c2c5-4221-883f-e072cda14740.png">
+
+![gif-trybetunes](https://user-images.githubusercontent.com/37047615/155803051-55cd8d51-c6ed-4f82-969d-1fa19495922f.gif)
 
 # Instruções para clonar o projeto
 
