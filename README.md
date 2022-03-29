@@ -5,7 +5,7 @@ Este projeto trata-se de uma aplicação capaz de reproduzir músicas das mais v
 Utilizei a `API` do Itunes para ter acesso as musicas e reproduzi-las.
 
 ## Aprendizados
-Esse projeto foi bem desafiador durante o modulo de Frontend pois era um projeto novo e bem completo, consegui aprender React de uma forma bem profunda e técnica com o desenvolvimento deste projeto como ciclo de vida de componentes, rotas, props etc
+Esse projeto foi bem desafiador durante o modulo de Frontend pois era um projeto novo e bem completo, consegui aprender React de uma forma bem profunda e técnica com o desenvolvimento deste projeto como ciclo de vida de componentes, react-router, props etc
 
 ### Ajustes e melhorias
 
